@@ -14,13 +14,13 @@
 	   font-size: 3vw;
    }
 	h1 {
-		font-size: 5vw;
+		font-size: 4vw;
 	}
 	th {
 		text-align : left;
 	}
 	p {
-		font-size : 3vw;
+		font-size : 2vw;
 	}
 
 </style>
@@ -69,7 +69,7 @@ $sql = "SELECT A.*, B.`sensorName` FROM `kolaasbakkanen02`.`logentry` as A  left
 $siste = array (); 
 
 $result = mysqli_query($conn, $sql);
-	echo "<table>";
+//	echo "<table>";
 	 
 	for($x=0; $x < $sensor_count ; $x++ ) {
 		$row = mysqli_fetch_assoc($result);
@@ -81,11 +81,11 @@ $result = mysqli_query($conn, $sql);
 		} 
 		$formatted_number = number_format((float)$row['value'], 1, '.', '');    
 		$siste[$identifier] = $formatted_number; // to be used when showing gauge
-		echo "<tr><td>".$identifier."</td><td>".$formatted_number."</td></tr>" ;
+//		echo "<tr><td>".$identifier."</td><td>".$formatted_number."</td></tr>" ;
 		$lasttimestamp = $row['timestamp'] ;
 	}
 	
-	echo "</table>";                                 
+//	echo "</table>";                                 
 	echo "<p>Time: ".$lasttimestamp.", Site: ".$site."</p>";
  
  ?>
