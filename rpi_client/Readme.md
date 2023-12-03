@@ -16,7 +16,10 @@ dtoverlay=w1-gpio
 In raspi-config - enable 1 wire interface
 
 After reboot:
+
 sudo modprobe w1-gpio
+
 sudo modprobe w1-therm
+
 cd /sys/bus/w1/devices
 
