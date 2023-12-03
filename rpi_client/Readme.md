@@ -13,6 +13,8 @@ sudo nano /boot/config.txt :
 Append line:
 dtoverlay=w1-gpio
 
+Default is GPIO4 (pin 7), can be altered in command above.
+
 In raspi-config - enable 1 wire interface
 
 After reboot:
