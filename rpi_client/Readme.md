@@ -23,3 +23,8 @@ sudo modprobe w1-therm
 
 cd /sys/bus/w1/devices
 
+
+Also wise to consider enabling whatchdog on raspberry:
+
+https://diode.io/blog/running-forever-with-the-raspberry-pi-hardware-watchdog
+
